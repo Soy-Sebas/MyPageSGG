@@ -1,0 +1,41 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+    {
+        date:'Actualmente...',
+        company: 'Aprende+ Colombia',
+        position:'CEO',
+        title:'Empresa Certificadora + Plataforma de Cursos Virtuales',
+        description: 'Explora nuestra plataforma educativa en línea colombiana, donde descubrirás cursos especializados en áreas como Programación, Herramientas Digitales, Análisis de Datos, Consultoría, Auditoría, Tributaria, Contabilidad y más. Nuestros nichos principales abarcan Tecnología, Data y Economía para ofrecerte una experiencia educativa integral.',
+        link: '#',
+    },
+    {
+        date:'Actualmente...',
+        company: 'Youtube',
+        position:'Creador de Contenido',
+        title:'Experimento con tecnologías y economías contemporáneas y comparto mis experiencias',
+        description: 'Administro dos canales: uno educativo centrado en tecnología, con énfasis en programación (DevSebas), y otro donde comparto experiencias y consejos sobre economía y desarrollo personal (Sebastián Gutiérrez). Mi meta es crear un entorno educativo enriquecedor.',
+        link: 'https://www.youtube.com/@Sebastian.Gutierrez',
+        
+    },
+    {
+        date:'Actualmente...',
+        company: 'PriceWaterHouseCoopers',
+        position:'Auditor en Formación',
+        title:'Auditoría, Consultoría y Asesoría Legal y Tributaria',
+        description: 'Me encuentro en prácticas con un contrato de aprendizaje hasta el 20 de diciembre de 2024. Mi objetivo es consolidar mi posición en la empresa mediante un contrato indefinido, gracias a mi dedicación y habilidades. Estoy comprometido a aportar lo mejor de mí.',
+        link: 'https://www.pwc.com/co/es/',
+    },
+]
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">    
+    {
+        EXPERIENCIE.map(experience => (
+            <li class="mb-12 ms-6">
+                <ExperienceItem {...experience}/>
+            </li> 
+        ))
+</ol>
+
