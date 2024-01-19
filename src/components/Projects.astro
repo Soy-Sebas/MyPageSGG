@@ -1,0 +1,31 @@
+---
+const PROJECTS = [
+    {
+        title: "Aprende + Colombia - Plataforma educativa en línea colombiana",
+        description: 
+            "Descubre cursos especializados en áreas como Programación, Herramientas Digitales, Análisis de Datos, Consultoría, Auditoría, Tributaria, Contabilidad y más",
+        link: "",
+        github: "https://github.com/Soy-Sebas/aprendemascolombia",
+        image: "/photos/projectAP.webp",
+        tags: ["Next.js", "TypeScript", "React", "Tailwind CSS", "SQL"]
+    }
+]
+---
+
+{
+    PROJECTS.map(({image, title, description, tags}) => (
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+                {tags.map(tag => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <img 
+                class="rounded shadow-white/30 shadow-2xl " 
+                src={image} 
+                alt={`Captura de pantalla del proyecto ${image}`}/>
+        </article>
+    ))
+}

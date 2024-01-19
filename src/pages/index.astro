@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import Projects from '../components/Projects.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import SocialElement from '../components/SocialElement.astro';
@@ -8,11 +9,12 @@ import GitHubIcon from '../components/icons/GitHub.astro';
 import YoutubeIcon from '../components/icons/Youtube.astro';
 import GmailIcon from '../components/icons/Gmail.astro';
 import Experience from '../components/Experience.astro';
-import Maletin from '../components/icons/Maletin.astro';
-import LinktreeIcon from '../components/icons/Linktree.astro';
+import MaletinIcon from '../components/icons/Maletin.astro';
 import DiscordIcon from '../components/icons/Discord.astro';
+import InstagramIcon from '../components/icons/Instagram.astro'
+import DowloadIcon from '../components/icons/Download.astro';
 import BadgeCurr from '../components/BadgeCurr.astro';
-import DownloadIcon from '../components/icons/Download.astro';
+import ProyectsIcon from '../components/icons/Proyects.astro';
 ---
 <Layout 
 	title="Porfolio SoyySebas - Desarrollador, Programador Web, Analista de Datos, Contador y Auditor"
@@ -20,7 +22,7 @@ import DownloadIcon from '../components/icons/Download.astro';
 >
 
 	<main class="px-4">
-		<SectionContainer class="py-24 lg:py-44 pb-16 lg:pb-24">
+		<SectionContainer class="py-24 lg:py-44 pb-16 lg:pb-32">
 			<img 
 			class="rounded-full size-28 mb-4" 
 			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8aC6AedRiF0LQYTQ5pVkZ_0kssB_cpf4cUVxylCodiQ&s" 
@@ -59,17 +61,21 @@ import DownloadIcon from '../components/icons/Download.astro';
 					<GitHubIcon class="size-4 md:size-6"></GitHubIcon>
 						GitHub
 				</SocialElement>
+				<SocialElement href="https://www.instagram.com/soyy_sebas/">
+					<InstagramIcon class="size-4 md:size-6"></InstagramIcon>
+						Instagram
+				</SocialElement>
+				<SocialElement href="https://discordapp.com/users/1140012750874099772">
+					<DiscordIcon class="size-4 md:size-6"></DiscordIcon>
+						Discord
+					</SocialElement>
 				<SocialElement href="https://www.youtube.com/@Sebastian.Gutierrez">
 					<YoutubeIcon class="size-4 md:size-6"></YoutubeIcon>
 						Youtube
 				</SocialElement>
-				<SocialElement href="https://linktr.ee/soyysebas">
-					<LinktreeIcon class="size-4 md:size-6"></LinktreeIcon>
-						Linktree
-					</SocialElement>
-				<SocialElement href="https://wa.me/573142831686">
-						<DiscordIcon class="size-4 md:size-6"></DiscordIcon>
-						WhatsApp
+				<SocialElement href="https://www.youtube.com/@Sebastian-Gutierrez">
+					<YoutubeIcon class="size-4 md:size-6"></YoutubeIcon>
+						DevSebas
 				</SocialElement>
 				<div id="copiedNotification" class="notification"></div>
 				<SocialElement id="miSocialElementCorreo" role="button">
@@ -81,11 +87,11 @@ import DownloadIcon from '../components/icons/Download.astro';
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">
-			<h2 class="text-xl lg:text-2xl font-semibold mb-6 flex gap-x-2 items-center">
-				<Maletin class="size-7 md:size-7"/>
+			<h2 class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+				<MaletinIcon class="size-7 md:size-7"/>
 				Experiencia
 				<a 
-					href="https://www.linkedin.com/in/sebastian-gutierrez-guayacundo-43b165288"
+					href=""
 					target="_blank"
 					rel="noopener"
 					class="flex justify-center items-center"
@@ -97,10 +103,11 @@ import DownloadIcon from '../components/icons/Download.astro';
 		</SectionContainer>
 
 		<SectionContainer id="proyectos">
-			<h2 class="text-xl lg:text-2xl font-semibold mb-6 flex gap-x-2 items-center">
-				<Maletin class="size-7 md:size-7"/>
+			<h2 class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+				<ProyectsIcon class="size-7 md:size-7"/>
 				Proyectos
 			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
