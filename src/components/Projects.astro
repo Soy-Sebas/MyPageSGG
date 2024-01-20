@@ -1,31 +1,52 @@
 ---
+import NextJSicon from "./icons/NextJS.astro";
+import Tailwindicon from "./icons/Tailwind.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-[black] text-white neon-link",
+    icon: NextJSicon,
+  },
+  TAILWIND:{
+    name: "Tailwind CSS",
+    class: "bg-[#215a5c] text-white neon-link",
+    icon: Tailwindicon,
+  },
+};
 const PROJECTS = [
-    {
-        title: "Aprende + Colombia - Plataforma educativa en línea colombiana",
-        description: 
-            "Descubre cursos especializados en áreas como Programación, Herramientas Digitales, Análisis de Datos, Consultoría, Auditoría, Tributaria, Contabilidad y más",
-        link: "",
-        github: "https://github.com/Soy-Sebas/aprendemascolombia",
-        image: "/photos/projectAP.webp",
-        tags: ["Next.js", "TypeScript", "React", "Tailwind CSS", "SQL"]
-    }
-]
+  {
+    title: "Aprende+ Colombia - Plataforma de cursos en línea Colombiana",
+    description:
+      "Creada con Next.js y Tailwind CSS, es una plataforma de cursos especializados en áreas como Tecnología, Data y Economía. Su base de datos esta basada en SQL, con API integrada y una app en desarrollo. Esta plataforma se encuentra en constante actualización para dar una excelente experiencia de usuario.",
+    link: "",
+    github: "https://github.com/Soy-Sebas/aprendemascolombia",
+    image: "/photos/projectAP.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+];
 ---
 
 {
-    PROJECTS.map(({image, title, description, tags}) => (
-        <article>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <ul>
-                {tags.map(tag => (
-                    <li>{tag}</li>
-                ))}
-            </ul>
-            <img 
-                class="rounded shadow-white/30 shadow-2xl " 
-                src={image} 
-                alt={`Captura de pantalla del proyecto ${image}`}/>
-        </article>
-    ))
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-2 px-2`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded-3xl py-2 px-2"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
 }
