@@ -1,9 +1,37 @@
-<header class="fixed top-0 left-0 right-0 flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto z-10 backdrop-filter backdrop-blur-lg bg-opacity-70">
-
-    <nav class="flex flex-wrap item-center gap-x-4 md:gap-x-20 opacity-80">
-        <a class="font-bold" href="#experiencia">Experiencia</a>
-        <a class="font-bold" href="#proyectos">Proyectos</a>
-        <a class="font-bold" href="#sobre-mi">Sobre mí</a>
-        <a class="font-bold" href="#contacto">Contacto</a>
-    </nav>
+<header
+  class={`
+    flex justify-center items-center
+    mx-auto
+    py-5
+    sticky top-0
+    w-full xl:w-[1120px]
+    z-10
+  `}
+>
+  <nav
+    class={`
+      menu border border-black rounded-full
+      px-3 py-1
+      flex flex-row items-center
+      bg-gray-900
+    `}
+  >
+    <a
+      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
+      href="#experiencia">Experiencia</a
+    >
+    <a
+      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
+      href="#proyectos">Proyectos</a
+    >
+    <a
+      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
+      href="#sobre-mi">Sobre mí</a
+    >
+    <a
+      class="hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
+      href="#contacto">Contacto</a
+    >
+  </nav>
 </header>
+<script src="../scripts/siteemp.js"></script>

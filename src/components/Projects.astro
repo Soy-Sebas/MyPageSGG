@@ -1,17 +1,29 @@
 ---
 import NextJSicon from "./icons/NextJS.astro";
 import Tailwindicon from "./icons/Tailwind.astro"
+import JavaScripticon from "./icons/JavaScript.astro"
+import TypeScripticon from "./icons/TypeSript.astro"
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-[black] text-white neon-link",
+    class: "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
     icon: NextJSicon,
   },
   TAILWIND:{
     name: "Tailwind CSS",
-    class: "bg-[#215a5c] text-white neon-link",
+    class: "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
     icon: Tailwindicon,
+  },
+  JAVASCRIPT:{
+    name: "JavaScript",
+    class: "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+    icon: JavaScripticon,
+  },
+  TYPESCRIPT:{
+    name: "TypeScript",
+    class: "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+    icon: TypeScripticon,
   },
 };
 const PROJECTS = [
@@ -22,7 +34,7 @@ const PROJECTS = [
     link: "",
     github: "https://github.com/Soy-Sebas/aprendemascolombia",
     image: "/photos/projectAP.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT],
   },
 ];
 ---
@@ -30,20 +42,20 @@ const PROJECTS = [
 {
   PROJECTS.map(({ image, title, description, tags }) => (
     <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row">
+      <h3 class="text-xl lg:text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-sm lg:text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-wrap">
         {tags.map((tag) => (
-          <li>
-            <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-2 px-2`}>
-              <tag.icon class="size-4" />
+          <li class="mb-2">
+            <span class={`font-semibold flex gap-x-2 rounded-full text-xs lg:text-xs ${tag.class} py-2 px-2`}>
+              <tag.icon class="size-3 lg:size-3" />
               {tag.name}
             </span>
           </li>
         ))}
       </ul>
       <img
-        class="rounded-3xl py-2 px-2"
+        class="rounded-3xl py-2 px-2 shadow-2xl shadow-white/20 w-auto"
         src={image}
         alt={`Captura de pantalla del proyecto ${image}`}
       />
