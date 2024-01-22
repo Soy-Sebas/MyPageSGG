@@ -25,7 +25,7 @@ const { description, title } = Astro.props;
     <body class="relative text-black dark:text-white"></body>
     <div
       class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 bg-neutral-100 dark:bg-neutral-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))] dark:[background:radial-gradient(90%_150%_at_50%_30%,#001_20%,#e10063_180%)]"
+      bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,rgba(255,216,255,0.5),rgba(255,255,255,0.9))] dark:[background:radial-gradient(90%_150%_at_50%_30%,#001_20%,#e10063_180%)]"
     >
     </div>
     <Header />
@@ -74,7 +74,7 @@ const { description, title } = Astro.props;
       filter 0.3s ease-in-out;
   }
   .neon-link {
-    font-weight:inherit;
+    font-weight: inherit;
   }
   .notification {
     position: fixed;
@@ -98,6 +98,22 @@ const { description, title } = Astro.props;
     }
     100% {
       opacity: 0;
+    }
+  }
+  /* Estilo predeterminado para el modo claro */
+  path.dark-mode {
+    fill: white; /* Relleno negro para el segundo path */
+  }
+
+  /* Estilo para el modo oscuro */
+  @media (prefers-color-scheme: dark) {
+    path.light-mode {
+      fill: white; /* Relleno negro para el primer path */
+    }
+
+    
+    path.dark-mode {
+      fill: black; /* Relleno blanco para el segundo path */
     }
   }
 </style>
