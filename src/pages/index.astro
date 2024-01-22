@@ -1,20 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import Projects from "../components/Projects.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import SocialElement from "../components/SocialElement.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import YoutubeIcon from "../components/icons/Youtube.astro";
-import GmailIcon from "../components/icons/Gmail.astro";
-import Experience from "../components/Experience.astro";
-import MaletinIcon from "../components/icons/Maletin.astro";
-import DiscordIcon from "../components/icons/Discord.astro";
-import InstagramIcon from "../components/icons/Instagram.astro";
-import DowloadIcon from "../components/icons/Download.astro";
-import BadgeCurr from "../components/BadgeCurr.astro";
-import ProyectsIcon from "../components/icons/Proyects.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import AboutMe from "@/components/AboutMe.astro";
+import Badge from "@/components/Badge.astro";
+import BadgeCurr from "@/components/BadgeCurr.astro";
+import DiscordIcon from "@/components/icons/Discord.astro";
+import Experience from "@/components/Experience.astro";
+import GitHubIcon from "@/components/icons/GitHub.astro";
+import GmailIcon from "@/components/icons/Gmail.astro";
+import InstagramIcon from "@/components/icons/Instagram.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MaletinIcon from "@/components/icons/Maletin.astro";
+import ProfileIcon from "@/components/icons/Profile.astro";
+import Projects from "@/components/Projects.astro";
+import ProyectsIcon from "@/components/icons/Proyects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialElement from "@/components/SocialElement.astro";
+import YoutubeIcon from "@/components/icons/Youtube.astro";
 ---
 
 <Layout
@@ -128,9 +130,10 @@ import ProyectsIcon from "../components/icons/Proyects.astro";
 			<h2
 				class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
 			>
-				<ProyectsIcon class="size-7 md:size-7" />
+				<ProfileIcon class="size-7 md:size-7" />
 				Sobre mí
 			</h2>
+			<AboutMe />
 		</SectionContainer>
 	</main>
 </Layout>
