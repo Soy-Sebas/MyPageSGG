@@ -1,28 +1,32 @@
 ---
 import NextJSicon from "./icons/NextJS.astro";
-import Tailwindicon from "./icons/Tailwind.astro"
-import JavaScripticon from "./icons/JavaScript.astro"
-import TypeScripticon from "./icons/TypeSript.astro"
+import Tailwindicon from "./icons/Tailwind.astro";
+import JavaScripticon from "./icons/JavaScript.astro";
+import TypeScripticon from "./icons/TypeSript.astro";
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+    class:
+      "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
     icon: NextJSicon,
   },
-  TAILWIND:{
+  TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-white/5 border border-white/10 text-white tsransition hover:scale-105 ",
+    class:
+      "bg-white/5 border border-white/10 text-white tsransition hover:scale-105 ",
     icon: Tailwindicon,
   },
-  JAVASCRIPT:{
+  JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+    class:
+      "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
     icon: JavaScripticon,
   },
-  TYPESCRIPT:{
+  TYPESCRIPT: {
     name: "TypeScript",
-    class: "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+    class:
+      "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
     icon: TypeScripticon,
   },
 };
@@ -42,12 +46,16 @@ const PROJECTS = [
 {
   PROJECTS.map(({ image, title, description, tags }) => (
     <article>
-      <h3 class="text-xl lg:text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <h3 class="text-xl lg:text-2xl font-semibold text-yellow-200 mb-2">
+        {title}
+      </h3>
       <p class="text-sm lg:text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-wrap">
         {tags.map((tag) => (
           <li class="mb-2">
-            <span class={`font-semibold flex gap-x-2 rounded-full text-xs lg:text-xs ${tag.class} py-2 px-2`}>
+            <span
+              class={`font-semibold flex gap-x-2 rounded-full text-xs lg:text-xs ${tag.class} py-2 px-2`}
+            >
               <tag.icon class="size-3 lg:size-3" />
               {tag.name}
             </span>
