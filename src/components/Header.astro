@@ -1,30 +1,30 @@
 ---
 const navItems = [
   {
-    title: 'Inicio',
-    url: '/#top'
+    title: "Inicio",
+    url: "/#top",
   },
   {
-    title: 'Experiencia',
-    url: '/#experiencia'
+    title: "Experiencia",
+    url: "/#experiencia",
   },
   {
-    title: 'Proyectos',
-    url: '/#proyectos'
+    title: "Proyectos",
+    url: "/#proyectos",
   },
   {
-    title: 'Sobre mí',
-    url: '/#sobre-mi'
+    title: "Sobre mí",
+    url: "/#sobre-mi",
   },
   {
-    title: 'Contacto',
-    url: '/#contacto'
+    title: "Contacto",
+    url: "/#contacto",
   },
-]
+];
 ---
 
 <header
-  class={`
+  class={`  
     flex justify-center items-center
     mx-auto
     py-5
@@ -41,12 +41,16 @@ const navItems = [
       bg-neutral-200 opacity-80 dark:bg-[#340024] dark:opacity-80
     `}
   >
-  {navItems.map(link => (
-    <a
-      class="hover:bg-black/15 dark:hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
-      href={link.url}>{link.title}</a
-    >
-  ))}
+    {
+      navItems.map((link) => (
+        <a
+          class="hover:bg-black/15 dark:hover:bg-white/10 rounded-full px-2 sm:px-3 transition text-sm sm:text-base"
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
   </nav>
 </header>
 <script src="../scripts/seguimiento.ts"></script>
