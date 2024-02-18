@@ -3,7 +3,7 @@ import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCIE = [
     {
         date:'Actualmente...',
-        company: 'Aprende+ Colombia',
+        company: 'Aprende+',
         position:'CEO',
         title:'Empresa Certificadora + Plataforma de Cursos Virtuales',
         description: 'Explora nuestra plataforma educativa en línea colombiana, donde descubrirás cursos especializados en áreas como Programación, Herramientas Digitales, Análisis de Datos, Consultoría, Auditoría, Tributaria, Contabilidad y más. Nuestros nichos principales abarcan Tecnología, Data y Economía para ofrecerte una experiencia educativa integral.',
@@ -12,8 +12,8 @@ const EXPERIENCIE = [
     {
         date:'Actualmente...',
         company: 'Youtube',
-        position:'Creador de Contenido',
-        title:'Experimento con tecnologías y economías contemporáneas y comparto mis experiencias',
+        position:'Contenido',
+        title:'Contenido Educativo y Experiencias Personales',
         description: 'Administro dos canales: uno educativo centrado en tecnología, con énfasis en programación (DevSebas), y otro donde comparto experiencias, noticias, actualizaciones y consejos sobre economía Colombiana y desarrollo personal (Sebastián Gutiérrez). Con esto y mucho más mi objetivo es crear un entorno educativo enriquecedor.',
         link: 'https://linktr.ee/soyysebas',
         
@@ -30,12 +30,13 @@ const EXPERIENCIE = [
 ---
 
 
-<ol class="relative border-s border-gray-200 ml-3">    
+<ol class="relative mt-16">
     {
-        EXPERIENCIE.map(experience => (
-            <li class="mb-12 ms-6">
-                <ExperienceItem {...experience}/>
-            </li> 
-        ))
-</ol>
+      EXPERIENCIE.map((experiencie) => (
+        <li class="">
+          <ExperienceItem {...experiencie} />
+        </li>
+      ))
+    }
+  </ol>
 

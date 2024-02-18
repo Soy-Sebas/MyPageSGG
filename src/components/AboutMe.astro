@@ -1,26 +1,33 @@
-<section class="flex gap-x-4 justify-center items-center">
+---
+const personalImageAlt = "Sebastian Gutierrez Guayacundo";
+---
+
+<article
+    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
     <div
-        class="[&>p]:mb-2 lg:[&>p]:mb-4 [&>p>strong]:text-[#fef08a] [&>p>strong]:font-semibold text-pretty"
+        class="[&>p]:mb-4 [&>p>strong]:text-yellow-700 dark:[&>p>strong]:text-yellow-300 [&>p>strong]:font-bold [&>p>strong]:font-mono text-pretty order-2 md:order-1"
     >
         <p>
             Mi nombre completo es Sebastián Gutiérrez Guayacundo. Mi aventura en
             la programación comenzó al descubrir VBA (Visual Basic para
-            Aplicaciones) integrado en Excel a los 15 años. Empecé probandono
+            Aplicaciones) integrado en Excel a los 15 años. Empecé probando
             macros y <strong
                 >terminé desarrollando un software contable básico</strong
             >
             mientras estudiaba "Gestión Contable y Financiera" como tecnólogo en
             el SENA (Servicio Nacional de Aprendizaje).
         </p>
+
         <p>
             Actualmente, <strong
-                >ocupo el cargo de CEO y lidero el desarrollo de Aprende+
-                Colombia</strong
+                >ocupo el cargo de CEO y lidero el desarrollo de Aprende+</strong
             >, una plataforma de cursos virtuales enfocada en áreas como
             Tecnología, Data y Economía. Mi principal meta es <strong
                 >establecer una empresa líder en desarrollo con base en Colombia</strong
             > que tenga un vínculo directo con la plataforma anterior.
         </p>
+
         <p>
             Como creador de contenido, gestiono dos canales en YouTube:
             <strong>DevSebas</strong>, centrado en el universo tecnológico con
@@ -30,8 +37,13 @@
             Colombia y desarrollo personal.
         </p>
     </div>
+
     <img
-        src="/photos/Sebastian.png"
-        class="rounded-full size-64 shadow-2xl shadow-yellow-300"
+        width="200"
+        height="200"
+        src="/photos/Yo.jpeg"
+        alt={personalImageAlt}
+        class="order-1 object-cover w-64 h-full p-1 bg-black md:order-2 rotate-3 lg:p-2 lg:w-64 rounded-2xl dark:bg-yellow-500 ring-1 ring-white/20 shadow-2xl dark:shadow-lg shadow-black dark:shadow-white"
+        style="object-position: 50% 50%"
     />
-</section>
+</article>

@@ -2,22 +2,14 @@
 import Layout from "@/layouts/Layout.astro";
 
 import AboutMe from "@/components/AboutMe.astro";
-import Badge from "@/components/Badge.astro";
 import BadgeCurr from "@/components/BadgeCurr.astro";
-import DiscordIcon from "@/components/icons/Discord.astro";
 import Experience from "@/components/Experience.astro";
-import GitHubIcon from "@/components/icons/GitHub.astro";
-import GmailIcon from "@/components/icons/Gmail.astro";
-import InstagramIcon from "@/components/icons/Instagram.astro";
-import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MaletinIcon from "@/components/icons/Maletin.astro";
 import ProfileIcon from "@/components/icons/Profile.astro";
 import Projects from "@/components/Projects.astro";
 import ProyectsIcon from "@/components/icons/Proyects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
-import SocialElement from "@/components/SocialElement.astro";
-import YoutubeIcon from "@/components/icons/Youtube.astro";
-import BlogIcon from "@/components/icons/Blog.astro";
+import Yo from "@/components/Yo.astro";
 ---
 
 <Layout
@@ -26,81 +18,7 @@ import BlogIcon from "@/components/icons/Blog.astro";
 >
 	<main class="px-4">
 		<SectionContainer id="top" class="py-24 lg:py-44 pb-16 lg:pb-32">
-			<img
-				class="rounded-full size-16 mb-4"
-				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8aC6AedRiF0LQYTQ5pVkZ_0kssB_cpf4cUVxylCodiQ&s"
-				alt="soy_sebas photo"
-			/>
-			<h1
-				class="text-gray-900 dark:text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-			>
-				Hey, Soy Sebastian
-				<a
-					href="https://www.linkedin.com/in/sebastian-gutierrez-guayacundo-43b165288"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
-			<h2
-				class="text-lg lg:text-2xl text-pretty max-w-[700px] text-black dark:text-white"
-			>
-				Mi enfoque integral abarca una diversa gama de habilidades
-				<span class="text-red-700 dark:text-yellow-200">
-					Desarrollador, Analista de Datos, Contador, Auditor y
-					Creador de Contenido
-				</span>.
-				<span class="text-sky-800 dark:text-sky-200">
-					De Bogotá, Colombia
-				</span>.
-				<span class="opacity-80 dark:opacity-70">
-					Especializado en diseñar y ejecutar soluciones únicas para
-					impulsar el éxito en cada proyecto.
-				</span>
-			</h2>
-
-			<nav class="flex gap-3.5 mt-4 lg:mt-6 flex-wrap">
-				<SocialElement
-					href="https://www.linkedin.com/in/sebastian-gutierrez-guayacundo-43b165288"
-				>
-					<LinkedInIcon class="size-5 md:size-6" />
-					LinkedIn
-				</SocialElement>
-				<SocialElement href="https://github.com/Soy-Sebas">
-					<GitHubIcon class="size-5 md:size-6" />
-					GitHub
-				</SocialElement>
-				<SocialElement href="https://www.instagram.com/soyy_sebas/">
-					<InstagramIcon class="size-5 md:size-6" />
-					Instagram
-				</SocialElement>
-				<SocialElement
-					href="https://discordapp.com/users/1140012750874099772"
-				>
-					<DiscordIcon class="size-5 md:size-6" />
-					Discord
-				</SocialElement>
-				<SocialElement
-					href="https://linktr.ee/soyysebas"
-				>
-					<YoutubeIcon class="size-5 md:size-6" />
-					Youtube
-				</SocialElement>
-				<SocialElement
-					href="https://linktr.ee/soyysebas"
-				>
-					<BlogIcon class="size-5 md:size-6" />
-					Blog
-				</SocialElement>
-				<div id="copiedNotification" class="notification"></div>
-				<SocialElement id="miSocialElementCorreo" role="button">
-					<GmailIcon class="size-5 md:size-6" />
-					sebastian.gutierrez.guayacundo@gmail.com
-					<script src="../scripts/copyEm.js"></script>
-				</SocialElement>
-			</nav>
+			<Yo />
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">

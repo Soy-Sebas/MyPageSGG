@@ -3,30 +3,33 @@ import NextJSicon from "./icons/NextJS.astro";
 import Tailwindicon from "./icons/Tailwind.astro";
 import JavaScripticon from "./icons/JavaScript.astro";
 import TypeScripticon from "./icons/TypeSript.astro";
+import LinkButton from "./LinkButton.astro";
+import GitHub from "./icons/GitHub.astro";
+import Link from "./icons/Link.astro";
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
     class:
-      "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+      "bg-white/5  border border-black/20 black:border border-white/10 text-black dark:text-white transition hover:scale-105 ",
     icon: NextJSicon,
   },
   TAILWIND: {
     name: "Tailwind CSS",
     class:
-      "bg-white/5 border border-white/10 text-white tsransition hover:scale-105 ",
+      "bg-white/5  border border-black/20 black:border border-white/10 text-black dark:text-white tsransition hover:scale-105 ",
     icon: Tailwindicon,
   },
   JAVASCRIPT: {
     name: "JavaScript",
     class:
-      "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+      "bg-white/5  border border-black/20 black:border border-white/10 text-black dark:text-white transition hover:scale-105 ",
     icon: JavaScripticon,
   },
   TYPESCRIPT: {
     name: "TypeScript",
     class:
-      "bg-white/5 border border-white/10 text-white transition hover:scale-105 ",
+      "bg-white/5  border border-black/20 black:border border-white/10 text-black dark:text-white transition hover:scale-105 ",
     icon: TypeScripticon,
   },
 };
@@ -35,38 +38,68 @@ const PROJECTS = [
     title: "Aprende+ Colombia - Plataforma de cursos en línea Colombiana",
     description:
       "Creada con Next.js y Tailwind CSS, es una plataforma de cursos especializados en áreas como Tecnología, Data y Economía. Su base de datos esta basada en SQL, con API integrada y una app en desarrollo. Esta plataforma se encuentra en constante actualización para dar una excelente experiencia de usuario.",
-    link: "",
-    github: "https://github.com/Soy-Sebas/aprendemascolombia",
+    link: "www.aprendemascol.com",
+    github: "https://github.com/Soy-Sebas/aprendeMasCo",
     image: "/photos/projectAP.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT],
+    tags: [TAGS.NEXT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.TYPESCRIPT],
   },
 ];
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags }) => (
-    <article>
-      <h3 class="text-xl lg:text-2xl font-semibold text-yellow-200 mb-2">
-        {title}
-      </h3>
-      <p class="text-sm lg:text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-wrap">
-        {tags.map((tag) => (
-          <li class="mb-2">
-            <span
-              class={`font-semibold flex gap-x-2 rounded-full text-xs lg:text-xs ${tag.class} py-2 px-2`}
-            >
-              <tag.icon class="size-3 lg:size-3" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded-3xl py-2 px-2 shadow-2xl shadow-white/20 w-auto"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-    </article>
-  ))
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Un proyecto creado desde el corazón"
+              class="object-cover object-top w-full h-60 transition duration-500 sm:h-full md:group-hover:scale-110"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+          <ul class="flex flex-wrap text-black mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full mt-2 text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+           
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-4 md:size-6"/>
+              Code
+              
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4 md:size-6"/>
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+          </div>
+      </article>
+    ))
 }
