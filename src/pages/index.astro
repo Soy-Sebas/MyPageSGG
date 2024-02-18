@@ -8,7 +8,9 @@ import MaletinIcon from "@/components/icons/Maletin.astro";
 import ProfileIcon from "@/components/icons/Profile.astro";
 import Projects from "@/components/Projects.astro";
 import ProyectsIcon from "@/components/icons/Proyects.astro";
+import ContactIcon from "@/components/icons/ContactIcon.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
+import Contact from "@/components/Contact.astro";
 import Yo from "@/components/Yo.astro";
 ---
 
@@ -55,6 +57,15 @@ import Yo from "@/components/Yo.astro";
 				Sobre mí
 			</h2>
 			<AboutMe />
+		</SectionContainer>
+		<SectionContainer id="contacto">
+			<h2
+				class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
+			>
+				<ContactIcon class="size-7 md:size-7" />
+				Contacto
+			</h2>
+			<Contact/>
 		</SectionContainer>
 	</main>
 </Layout>
