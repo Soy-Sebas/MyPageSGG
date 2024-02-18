@@ -23,10 +23,10 @@ import Send from "@/components/icons/Send.astro";
             type="text"
             placeholder="Nombre Completo"
             required
-            class="w-full px-4 py-3 border-2 text-gray-200 placeholder:text-gray-200 rounded-md outline-none focus:ring-4 border-blue-500 dark:border-gray-300 focus:border-gray-600 ring-gray-100"
+            class="w-full px-4 py-3 border-2 text-sm lg:text-base  text-gray-200 placeholder:text-gray-200 rounded-md outline-none focus:ring-4 border-blue-500 dark:border-gray-300 focus:border-gray-600 ring-gray-100"
             name="name"
         />
-        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        <div class="empty-feedback invalid-feedback text-red-400 text-xs lg:text-sm mt-1">
             Por favor, proporcione su nombre completo.
         </div>
     </div>
@@ -37,21 +37,21 @@ import Send from "@/components/icons/Send.astro";
             placeholder="Correo Electrónico"
             name="email"
             required
-            class="w-full px-4 py-3 border-2 text-gray-200 placeholder:text-gray-200 rounded-md outline-none focus:ring-4 border-blue-500 dark:border-gray-300 focus:border-gray-600 ring-gray-100"
+            class="w-full px-4 py-3 border-2 text-sm lg:text-base text-gray-200 placeholder:text-gray-200 rounded-md outline-none focus:ring-4 border-blue-500 dark:border-gray-300 focus:border-gray-600 ring-gray-100"
         />
-        <div class="empty-feedback text-red-400 text-sm mt-1">
+        <div class="empty-feedback text-red-400 text-xs lg:text-sm mt-1">
             Por favor, proporcione su dirección de correo electrónico.
         </div>
-        <div class="invalid-feedback text-red-400 text-sm mt-1">
+        <div class="invalid-feedback text-red-400 text-xs lg:text-sm mt-1">
             Por favor, proporcione una dirección de correo electrónico válida.
         </div>
     </div>
-    <div class="mb-3">
+    <div class="mb-5">
         <textarea
             name="message"
             required
             placeholder="Tu mensaje"
-            class="w-full px-4 py-3 border-2 text-gray-200 placeholder:text-gray-200 rounded-md outline-none h-36 focus:ring-4 border-blue-500 dark:border-gray-300 focus:border-gray-600 ring-gray-100"
+            class="w-full px-4 py-3 border-2 text-sm lg:text-base text-gray-200 placeholder:text-gray-200 rounded-md outline-none h-36 focus:ring-4 border-blue-500 dark:border-gray-300 focus:border-gray-600 ring-gray-100"
         ></textarea>
         <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
             Por favor, introduzca su mensaje.

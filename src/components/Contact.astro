@@ -2,7 +2,7 @@
 import Contactform from "@/components/Contactform.astro";
 ---
 
-<div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+<div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-2">
     <div>
         <h2 class="font-medium text-xl lg:text-2xl text-gray-800 dark:text-gray-200">Contacta a <strong class="text-blue-500 dark:text-yellow-300">Sebastian</strong> aquí:</h2>
         <p class="text-sm lg:text-base leading-relaxed text-slate-500 mt-3 dark:text-slate-400">
@@ -10,17 +10,17 @@ import Contactform from "@/components/Contactform.astro";
             Formulario.
         </p>
         <div class="mt-5">
-            <div class="flex items-center mt-2 lg:mt-32 space-x-2 text-blue-500 dark:text-yellow-300">
+            <div class="flex items-center mt-2 lg:mt-32  text-sm lg:text-base space-x-2 text-blue-500 dark:text-yellow-300">
                 <span>Bogotá, Colombia</span>
             </div>
-            <div class="flex items-center mt-2 space-x-2 text-gray-600 dark:text-gray-400">
+            <div class="flex items-center mt-2 space-x-2 text-sm lg:text-base  text-gray-600 dark:text-gray-400">
                 <a href="mailto:sebastian.gutierrez.guayacundo@gmail.com"
                     >sebastian.gutierrez.guayacundo@gmail.com</a
                 >
             </div>
         </div>
     </div>
-    <Contactform></Contactform>
+    
 
-    <div></div>
+    <div><Contactform></Contactform></div>
 </div>
