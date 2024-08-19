@@ -1,10 +1,12 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro";
-
 const navItems = [
   {
     title: "Inicio",
     url: "/#top",
+  },
+  {
+    title: "Sobre mí",
+    url: "/#sobremi",
   },
   {
     title: "Experiencia",
@@ -15,37 +17,52 @@ const navItems = [
     url: "/#proyectos",
   },
   {
-    title: "Sobre mí",
-    url: "/#sobre-mi",
+    title: "Blog",
+    url: "/#contacto",
   },
   {
     title: "Contacto",
-    url: "/#contacto",
+    url: "/blog",
   },
 ];
 ---
 
 <header
-  class="fixed z-10 flex items-center justify-center w-full mx-auto mt-4"
+  class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-16 px-20 backdrop-blur-lg border-b-[4px] border-b-[#e42a0f]"
 >
-  <nav
-    class="border border-black dark:border-white/30 rounded-full
-    px-2 py-2
-    flex flex-row items-center
-    bg-neutral-200 opacity-80 dark:bg-[#340024] dark:opacity-80"
+  <a
+    href="https://soyysebas.com/"
+    class="flex justify-center items-center gap-2"
   >
+    <svg
+      {...Astro.props}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 80 90"
+      width="60"
+      height="90"
+    >
+      <!-- Letra S -->
+      <text x="32" y="52" font-size="40" fill="currentColor">S</text>
+      <!-- Letra G -->
+      <text x="50" y="65" font-size="40" fill="currentColor">G</text>
+    </svg>
+
+    <h1 class="text-black text-xl">
+      <strong class="text-[#e42a0f]">Soy</strong>Sebas
+    </h1>
+  </a>
+
+  <nav class="flex justify-between items-center text-center space-x-20">
     {
       navItems.map((link) => (
         <a
-          class="rounded-full px-2 sm:px-3 transition text-xs sm:text-sm"
+          class="text-black hover:text-[#e42a0f] hover:font-bold"
           href={link.url}
         >
           {link.title}
         </a>
       ))
     }
-    <ThemeToggle />
   </nav>
+  <div>Toggle</div>
 </header>
-
-<script src="../scripts/seguimiento.ts"></script>

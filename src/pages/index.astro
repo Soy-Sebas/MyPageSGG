@@ -1,71 +1,13 @@
 ---
+import About from "@/sections/About.astro";
 import Layout from "@/layouts/Layout.astro";
-
-import AboutMe from "@/components/AboutMe.astro";
-import BadgeCurr from "@/components/BadgeCurr.astro";
-import Experience from "@/components/Experience.astro";
-import MaletinIcon from "@/components/icons/Maletin.astro";
-import ProfileIcon from "@/components/icons/Profile.astro";
-import Projects from "@/components/Projects.astro";
-import ProyectsIcon from "@/components/icons/Proyects.astro";
-import ContactIcon from "@/components/icons/ContactIcon.astro";
-import SectionContainer from "@/components/SectionContainer.astro";
-import Contact from "@/components/Contact.astro";
-import Yo from "@/components/Yo.astro";
+import Hero from "@/sections/Hero.astro";
 ---
 
 <Layout
 	title="Porfolio SoyySebas - Desarrollador, Programador Web, Analista de Datos, Contador y Auditor"
 	description="Contacta o Contrata a Sebastian Gutierrez (SoyySebas) para obtener un servicio único en cualquier proyecto. Desarrollador, Analista de Datos, Contador, Auditor y Creador de Contenido."
 >
-	<main class="px-4">
-		<SectionContainer id="top" class="py-24 lg:py-44 pb-16 lg:pb-32">
-			<Yo />
-		</SectionContainer>
-
-		<SectionContainer id="experiencia">
-			<h2
-				class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
-			>
-				<MaletinIcon class="size-7 md:size-7" />
-				Experiencia
-				<a
-					href=""
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<BadgeCurr>Descargar CV</BadgeCurr>
-				</a>
-			</h2>
-			<Experience class="size-5 md:size-6" />
-		</SectionContainer>
-		<SectionContainer id="proyectos">
-			<h2
-				class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
-			>
-				<ProyectsIcon class="size-7 md:size-7" />
-				Proyectos
-			</h2>
-			<Projects />
-		</SectionContainer>
-		<SectionContainer id="sobre-mi">
-			<h2
-				class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
-			>
-				<ProfileIcon class="size-7 md:size-7" />
-				Sobre mí
-			</h2>
-			<AboutMe />
-		</SectionContainer>
-		<SectionContainer id="contacto">
-			<h2
-				class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-2 items-center"
-			>
-				<ContactIcon class="size-7 md:size-7" />
-				Contacto
-			</h2>
-			<Contact/>
-		</SectionContainer>
-	</main>
+	<Hero/>
+	<About/>
 </Layout>
