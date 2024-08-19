@@ -1,41 +1,17 @@
 ---
-const features = [
-    {
-        image: "",
-        name: "Colegio - Hernando Duran Dussan",
-        description:
-            "Cada colección es cuidadosamente diseñada para reflejar la diversidad y singularidad de nuestros clientes. Desde elegantes atuendos de noche hasta ropa casual de diario, nuestras colecciones abrazan la individualidad y la diversidad de estilos.",
-    },
-    {
-        name: "SENA - Servicio Nacional de Aprendizaje",
-        description:
-            "¿Buscas algo único? Nuestro servicio de personalización te permite crear prendas a medida que reflejen tu estilo personal. Desde ajustes de tamaño hasta detalles de diseño, hacemos que cada prenda sea verdaderamente tuya.",
-    },
-    {
-        name: "PWC - Pricewaterhousecoopers",
-        description:
-            "Sumérgete en nuestro mundo de moda y descubre inspiración ilimitada y consejos de estilo. Desde guías de tendencias hasta sugerencias de combinaciones de prendas, estamos aquí para ayudarte a expresar tu estilo de manera auténtica y personal.",
-    },
-    {
-        name: "Comunidad de Moda",
-        description:
-            "Únete a nuestra vibrante comunidad de moda donde puedes compartir tus ideas, inspirarte con otros estilos únicos y conectarte con personas que comparten tu pasión por la moda. Celebra tu individualidad y encuentra tu tribu en Dolcemaro.",
-    },
-    {
-        name: "Calidad y Elegancia",
-        description:
-            "La calidad es una prioridad. Nos esforzamos por ofrecer prendas de alta calidad con atención al detalle y materiales premium. Cada pieza es una declaración de elegancia y estilo atemporal.",
-    },
-    {
-        name: "Moda Sostenible",
-        description:
-            "Abrazamos la moda sostenible. Nuestras prendas reflejan nuestro compromiso con el medio ambiente y las comunidades locales. Con nosotros, puedes lucir bien y sentirte bien sabiendo que contribuyes a un mundo mejor.",
-    },
-];
+
 ---
 
 <div class="bg-gray-100 py-12">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+        class="mx-auto lg:max-w-7xl lg:flex justify-between items-center px-4 sm:px-6 lg:px-8"
+    >
+        <div class="lg:mx-10 xl:mx-20">
+            <img
+                src="/photos/ImageAbout.jpg"
+                class="hidden lg:block lg:w-auto object-cover bg-black p-1 lg:p-2  lg:max-w-sm rounded-xl ring-1 ring-white/20 shadow-2xl shadow-black"
+            />
+        </div>
         <div class="lg:text-center">
             <h2
                 class="text-base lg:text-xl text-center font-semibold uppercase tracking-wide text-[#e42a0f]"
@@ -43,7 +19,7 @@ const features = [
                 Sobre mi
             </h2>
             <p
-                class="mt-4 max-w-6xl text-center text-sm lg:text-lg text-gray-600 lg:mx-auto"
+                class="mt-4 max-w-6xl text-left text-sm lg:text-lg text-gray-600 lg:mx-auto"
             >
                 Mi nombre completo es <strong
                     >Sebastián Gutiérrez Guayacundo</strong
@@ -64,13 +40,8 @@ const features = [
                     rel="noopener noreferrer">SENA</a
                 >.
             </p>
-        </div>
-
-        <div class="mt-10"></div>
-
-        <div class="lg:text-center">
             <p
-                class="mt-4 max-w-6xl text-center text-sm lg:text-lg text-gray-600 lg:mx-auto"
+                class="mt-4 max-w-6xl text-left text-sm lg:text-lg text-gray-600 lg:mx-auto"
             >
                 Actualmente, estudio Contabilidad Pública y trabajo en <a
                     class="text-sky-600 text-decoration-line: underline"
@@ -81,10 +52,28 @@ const features = [
                     >soy CEO y lidero el desarrollo de Zeit</strong
                 >, una plataforma de aprendizaje enfocada en áreas como
                 Tecnología, Data y Economía. Mi visión a largo plazo es
-                consolidar una empresa <strong>líder en desarrollo con sede en Colombia</strong>,
-                vinculada a esta plataforma, y expandir mi trayectoria como
+                consolidar una empresa <strong
+                    >líder en desarrollo con sede en Colombia</strong
+                >, vinculada a esta plataforma, y expandir mi trayectoria como
                 emprendedor. Aspiro a crear y liderar múltiples empresas que
                 generen impacto en diversas industrias.
+            </p>
+            <p
+                class="mt-4 max-w-6xl text-left text-sm lg:text-lg text-gray-600 lg:mx-auto"
+            >
+                Por otro lado, como creador de contenido, gestiono dos canales
+                en YouTube: <a
+                    class="text-sky-600 text-decoration-line: underline"
+                    href="https://www.youtube.com/@Sebastian-Gutierrez"
+                    target="_blank"
+                    rel="noopener noreferrer">DevSebas</a
+                >, centrado en el universo tecnológico, y <a
+                    class="text-sky-600 text-decoration-line: underline"
+                    href="https://www.youtube.com/@Sebastian.Gutierrez/"
+                    target="_blank"
+                    rel="noopener noreferrer">Sebastián Gutiérrez</a
+                >, donde comparto experiencias, noticias y consejos sobre
+                economía en Colombia y desarrollo personal.
             </p>
         </div>
     </div>
