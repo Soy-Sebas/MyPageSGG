@@ -1,0 +1,139 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import Gmail from "./icons/Gmail.astro";
+import Instagram from "./icons/Instagram.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import Youtube from "./icons/Youtube.astro";
+---
+
+<footer
+    class="bg-gray-100 dark:bg-gray-800 py-12 border-t-[4px] border-t-[#e42a0f]"
+>
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+                    SoySebas
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Desarrollador apasionado y emprendedor tecnológico enfocado
+                    en crear soluciones innovadoras.
+                </p>
+            </div>
+            <div>
+                <h4
+                    class="text-lg font-semibold mb-4 text-gray-800 dark:text-white"
+                >
+                    Enlaces Rápidos
+                </h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a
+                            href="#inicio"
+                            class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            >Inicio</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#sobre-mi"
+                            class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            >Sobre Mí</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#experiencia"
+                            class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            >Experiencia</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#proyectos"
+                            class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            >Proyectos</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#contacto"
+                            class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            >Contacto</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4
+                    class="text-lg font-semibold mb-4 text-gray-800 dark:text-white"
+                >
+                    Contacto
+                </h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <Gmail class="w-4 h-4 text-gray-500" />
+                        <a
+                            href="mailto:sebastian.gutierrez.guayacundo@gmail.com"
+                            class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            >sgg@gmail.com</a
+                        >
+                    </li>
+                    <li class="text-sm text-gray-600 dark:text-gray-300">
+                        Bogotá, Colombia
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4
+                    class="text-lg font-semibold mb-4 text-gray-800 dark:text-white"
+                >
+                    Sígueme
+                </h4>
+                <div class="flex space-x-4">
+                    <a
+                        href="https://github.com/Soy-Sebas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <GitHub class="w-5 h-5" />
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/sebastian-gutierrez-guayacundo-43b165288/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <LinkedIn class="w-5 h-5" />
+                    </a>
+
+                    <a
+                        href="https://linktr.ee/soyysebas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube"
+                    >
+                        <Youtube class="w-5 h-5" />
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/soyy_sebas/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <Instagram class="w-5 h-5" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-center text-sm text-gray-600 dark:text-gray-300">
+                © {new Date().getFullYear()} Sebastián Gutierrez Guayacundo. Todos
+                los derechos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
