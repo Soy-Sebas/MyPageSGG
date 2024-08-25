@@ -1,80 +1,134 @@
 ---
-
+import Maletin from "@/components/icons/Maletin.astro";
+import Youtube from "@/components/icons/Youtube.astro";
+import Book from "@/components/icons/Book.astro";
+import Aim from "@/components/icons/Aim.astro";
 ---
 
-<div class="bg-gray-100 py-12">
-    <div
-        class="mx-auto lg:max-w-7xl lg:flex justify-between items-center px-4 sm:px-6 lg:px-8"
-    >
-        <div class="lg:mx-10 xl:mx-20">
-            <img
-                src="/photos/ImageAbout.jpg"
-                class="hidden lg:block lg:w-auto object-cover bg-black p-1 lg:p-2  lg:max-w-sm rounded-xl ring-1 ring-white/20 shadow-2xl shadow-black"
-            />
-        </div>
-        <div class="lg:text-center">
-            <h2
-                class="text-base lg:text-4xl text-center font-semibold uppercase tracking-wide text-[#e42a0f]"
+<section id="sobre-mi" class="py-10 bg-gray-100">
+    <div class="mx-auto max-w-7xl px-4">
+        <h2
+            class="text-base lg:text-4xl text-center font-semibold uppercase tracking-wide text-[#e42a0f] mb-10"
+        >
+            SOBRE MI :)
+        </h2>
+
+        <article class="grid md:grid-cols-2 gap-8">
+            <div
+                class="flex flex-wrap border rounded-xl shadow-xl bg-white hover:scale-105"
             >
-                Sobre mi
-            </h2>
-            <p
-                class="mt-4 max-w-6xl text-left text-sm lg:text-lg text-gray-600"
-            >
-                Mi nombre completo es <strong
-                    >Sebastián Gutiérrez Guayacundo</strong
-                >. Mi aventura en la tecnología, centrada en la programación,
-                comenzó en el <a
-                    class="text-sky-600 text-decoration-line: underline"
-                    href="https://www.colegiohernandoduran.edu.co/"
-                    target="_blank"
-                    rel="noopener noreferrer">colegio</a
-                > cuando descubrí VBA (Visual Basic para Aplicaciones) en Excel a
-                los 15 años. Lo que empezó como un experimento con macros se convirtió
-                en el <strong>desarrollo de un software contable básico</strong>
-                mientras estudiaba "Contabilización de Operaciones Comerciales y
-                Financieras" como técnico en el <a
-                    class="text-sky-600 text-decoration-line: underline"
-                    href="https://www.sena.edu.co/es-co/Paginas/default.aspx"
-                    target="_blank"
-                    rel="noopener noreferrer">SENA</a
-                >.
-            </p>
-            <p
-                class="mt-4 max-w-6xl text-left text-sm lg:text-lg text-gray-600"
-            >
-                Actualmente, estudio Contabilidad Pública y trabajo en <a
-                    class="text-sky-600 text-decoration-line: underline"
-                    href="https://www.pwc.com/co/es/"
-                    target="_blank"
-                    rel="noopener noreferrer">Pricewaterhousecoopers</a
-                >. Además, <strong
-                    >soy CEO y lidero el desarrollo de Zeit</strong
-                >, una plataforma de aprendizaje enfocada en áreas como
-                Tecnología, Data y Economía. Mi visión a largo plazo es
-                consolidar una empresa <strong
-                    >líder en desarrollo con sede en Colombia</strong
-                >, vinculada a esta plataforma, y expandir mi trayectoria como
-                emprendedor. Aspiro a crear y liderar múltiples empresas que
-                generen impacto en diversas industrias.
-            </p>
-            <p
-                class="mt-4 max-w-6xl text-left text-sm lg:text-lg text-gray-600"
-            >
-                Por otro lado, como creador de contenido, gestiono dos canales
-                en YouTube: <a
-                    class="text-sky-600 text-decoration-line: underline"
-                    href="https://www.youtube.com/@Sebastian-Gutierrez"
-                    target="_blank"
-                    rel="noopener noreferrer">DevSebas</a
-                >, centrado en el universo tecnológico, y <a
-                    class="text-sky-600 text-decoration-line: underline"
-                    href="https://www.youtube.com/@Sebastian.Gutierrez/"
-                    target="_blank"
-                    rel="noopener noreferrer">Sebastián Gutiérrez</a
-                >, donde comparto experiencias, noticias y consejos sobre
-                economía en Colombia y desarrollo personal.
-            </p>
-        </div>
+                <div class="mt-6 mx-6">
+                    <div class="flex flex-nowrap">
+                        <Book class="my-auto mr-2 size-7" />
+                        <h3 class="text-2xl font-bold">
+                            Educación y Experiencia
+                        </h3>
+                    </div>
+                    <p class="mt-8 mb-4">
+                        Mi nombre completo es <strong
+                            >Sebastián Gutiérrez Guayacundo</strong
+                        >. Mi aventura en la tecnología comenzó en el <a
+                            href="https://www.colegiohernandoduran.edu.co/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">colegio</a
+                        > cuando descubrí VBA en Excel a los 15 años.
+                    </p>
+                    <p class="mb-4">
+                        Desarrollé un software contable básico mientras
+                        estudiaba "Contabilización de Operaciones Comerciales y
+                        Financieras" como técnico en el <a
+                            href="https://www.sena.edu.co/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">SENA</a
+                        >.
+                    </p>
+                    <p class="mb-4">
+                        Actualmente, estudio Contabilidad Pública y trabajo en <a
+                            href="https://www.pwc.com/co/es/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline"
+                            >PricewaterhouseCoopers</a
+                        >.
+                    </p>
+                </div>
+                <div
+                    class="border mb-6 mx-6 rounded-xl bg-[#121013] text-gray-100"
+                >
+                    <div class="my-6 mx-6">
+                        <div class="flex flex-nowrap">
+                            <Aim class="my-auto mr-2 size-7" />
+                            <h3 class="text-xl font-bold">Mis Objetivos</h3>
+                        </div>
+                        <p class="mt-3">
+                            Aspiro a <strong>crear y liderar múltiples empresas</strong> que generen
+                            impacto en diversas industrias, combinando mi pasión por
+                            la tecnología, la economía y el desarrollo personal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div
+                    class="flex flex-wrap border rounded-xl bg-white shadow-lg hover:scale-105"
+                >
+                    <div class="my-6 mx-6">
+                        <div class="flex flex-nowrap">
+                            <Maletin class="my-auto mr-2" />
+                            <h3 class="text-2xl font-bold">Emprendimiento</h3>
+                        </div>
+                        <p class="mt-10 mb-4">
+                            Soy CEO y lidero el desarrollo de <strong
+                                >Zeit</strong
+                            >, una plataforma de aprendizaje enfocada en
+                            Tecnología, Data y Economía.
+                        </p>
+                        <p class="mb-4">
+                            Mi visión a largo plazo es consolidar una empresa
+                            líder en desarrollo con sede en Colombia, vinculada
+                            a esta plataforma, y expandir mi trayectoria como
+                            emprendedor.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-wrap border rounded-xl mt-8 bg-white shadow-xl hover:scale-105"
+                >
+                    <div class="my-6 mx-6">
+                        <div class="flex flex-nowrap">
+                            <Youtube class="my-auto mr-2 size-6" />
+                            <h3 class="text-2xl font-bold">
+                                Creación de Contenido
+                            </h3>
+                        </div>
+                        <p class="mt-10">Gestiono dos canales en YouTube:</p>
+                        <ul class="list-inside mt-2">
+                            <li>
+                                <a
+                                    href="https://www.youtube.com/@Sebastian-Gutierrez"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-blue-600 hover:underline"
+                                    >DevSebas</a
+                                >: centrado en el universo tecnológico.
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com/@Sebastian.Gutierrez/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-blue-600 hover:underline"
+                                    >Sebastián Gutiérrez</a
+                                >: donde comparto experiencias, noticias y
+                                consejos sobre economía en Colombia y desarrollo
+                                personal.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
-</div>
+</section>
