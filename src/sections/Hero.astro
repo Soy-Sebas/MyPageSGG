@@ -1,6 +1,5 @@
 ---
 const personalImageAlt = "Sebastian Gutierrez Guayacundo";
-import Badge from "@/components/Badge.astro";
 import DiscordIcon from "@/components/icons/Discord.astro";
 import GitHubIcon from "@/components/icons/GitHub.astro";
 import GmailIcon from "@/components/icons/Gmail.astro";
@@ -8,99 +7,83 @@ import InstagramIcon from "@/components/icons/Instagram.astro";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import Twitter from "@/components/icons/Twitter.astro";
 import YoutubeIcon from "@/components/icons/Youtube.astro";
-import SocialElement from "@/components/SocialElement.astro";
 ---
 
-<section class="relative overflow-hidden mt-10 lg:mt-0 bg-white">
-    <div class="mx-auto w-full xl:max-w-7xl">
+<section class="relative overflow-hidden mt-10 lg:mt-0 bg-[#FAFAFA]">
+    <div class="mx-64 w-full xl:max-w-full">
         <div
-            class="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:max-w-xl xl:max-w-2xl lg:pb-28 xl:pb-32"
+            class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-xl xl:max-w-2xl lg:pb-28 xl:pb-32"
         >
-            <svg
-                class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white xl:block"
-                fill="currentColor"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-            >
-                <polygon points="50,0 100,0 50,100 0,100"></polygon>
-            </svg>
-            <main
-                class="mx-auto px-4 pt-10 sm:px-6 lg:px-8 sm:pt-12 md:pt-20 lg:pt-24 xl:pt-28"
-            >
-                <div class="text-left">
-                    <a
-                        href="https://www.linkedin.com/in/sebastian-gutierrez-guayacundo-43b165288/"
-                        target="_blank"
-                        rel="noopener"
-                        class="mb-4 hidden lg:block"
-                    >
-                        <Badge>Disponible para trabajar</Badge>
-                    </a>
-                    <div class="flex flex-wrap pb-4">
-                        <img
-                            class="rounded-full size-24 lg:hidden lg:visible"
-                            src="./photos/HeroIm.jpeg"
-                            alt={personalImageAlt}
-                        />
-                        <div class="my-auto px-2 lg:hidden">
-                            <Badge>Disponible para trabajar</Badge>
-                        </div>
-                    </div>
-                    <h1
-                        class="font-extrabold tracking-tight text-gray-900 text-4xl sm:text-5xl xl:text-6xl"
-                    >
-                        <span class="shine-text block xl:inline"
-                            >Hey, Soy Sebastian</span
-                        >
-                    </h1>
-                    <p
-                        class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg md:mt-5 md:text-xl lg:mx-0"
-                    >
-                        Un apasionado por la tecnología, los números y los datos
-                        de Bogotá, Colombia. Me considero una persona integral,
-                        siempre motivado por aprender, adaptarme y mejorar cada
-                        día.
-                    </p>
-                    <p
-                        class="mt-3 text-gray-600 xl:max-w-xl sm:mt-5 text-base sm:text-lg md:mt-5 md:text-xl lg:mx-0"
-                    >
-                        ¡Si compartes mis intereses, sigue explorando para
-                        descubrir cómo podemos crecer juntos!
-                    </p>
+            <main class="mx-auto px-4 pt-10 sm:px-6 lg:px-8 sm:pt-12 md:pt-20">
+                <h1
+                    class="font-extrabold tracking-tight text-gray-900 text-4xl sm:text-5xl xl:text-6xl"
+                >
+                    Soy Sebastian
+                </h1>
+                <p
+                    class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg md:mt-5 md:text-xl lg:mx-0"
+                >
+                    Acelero el <strong class="font-semibold text-[#D32F2F]"
+                        >crecimiento de proyectos</strong
+                    > mediante soluciones tecnológicas avanzadas, análisis de datos,
+                    optimización y automatización de procesos.
+                </p>
+                <p
+                    class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg md:mt-5 md:text-xl lg:mx-0"
+                >
+                    Me considero un <strong
+                        class="font-semibold text-[#D32F2F]">apasionado</strong
+                    > por la tecnología, los números, los datos y por emprender.
+                </p>
+                <p
+                    class="mt-3 text-gray-600 xl:max-w-xl sm:mt-5 text-base sm:text-lg md:mt-5 md:text-xl lg:mx-0"
+                >
+                    ¡Si compartes mis intereses o necesitas apoyo en tu
+                    proyecto, sigue explorando para descubrir cómo podemos <strong
+                        class="font-semibold text-[#D32F2F]"
+                        >crecer juntos</strong
+                    >!
+                </p>
 
-                    <nav class="flex gap-3 mt-4 lg:mt-6 flex-wrap">
-                        <SocialElement
-                            href="https://www.instagram.com/soyy_sebas/"
-                        >
-                            <InstagramIcon class="size-5 md:size-6" />
-                        </SocialElement>
-                        <SocialElement href="https://linktr.ee/soyysebas">
-                            <YoutubeIcon class="size-5 md:size-6" />
-                        </SocialElement>
-                        <SocialElement href="https://twitter.com/SoyySebas">
-                            <Twitter class="size-5 md:size-6" />
-                        </SocialElement>
-                        <SocialElement
-                            href="https://www.linkedin.com/in/sebastian-gutierrez-guayacundo-43b165288"
-                        >
-                            <LinkedInIcon class="size-5 md:size-6" />
-                        </SocialElement>
-                        <SocialElement href="https://github.com/Soy-Sebas">
-                            <GitHubIcon class="size-5 md:size-6" />
-                        </SocialElement>
-                        <SocialElement
-                            href="https://discordapp.com/users/1140012750874099772"
-                        >
-                            <DiscordIcon class="size-5 md:size-6" />
-                        </SocialElement>
-                        <SocialElement
-                            href="mailto:sebastian.gutierrez.guayacundo@gmail.com"
-                        >
-                            <GmailIcon class="size-5 md:size-6" />
-                        </SocialElement>
-                    </nav>
-                </div>
+                <nav class="flex gap-8 mt-4 lg:mt-6 flex-wrap">
+                    <a href="https://www.instagram.com/soyy_sebas/">
+                        <InstagramIcon
+                            class="size-7 transition-transform duration-300 hover:scale-110"
+                        />
+                    </a>
+                    <a href="https://linktr.ee/soyysebas">
+                        <YoutubeIcon
+                            class="size-7 transition-transform duration-300 hover:scale-110"
+                        />
+                    </a>
+                    <a href="https://twitter.com/SoyySebas">
+                        <Twitter
+                            class="size-7 transition-transform duration-300 hover:scale-110"
+                        />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/sebastian-gutierrez-guayacundo-43b165288"
+                    >
+                        <LinkedInIcon
+                            class="size-7 transition-transform duration-300 hover:scale-110"
+                        />
+                    </a>
+                    <a href="https://github.com/Soy-Sebas">
+                        <GitHubIcon
+                            class="size-7 transition-transform duration-300 hover:scale-110"
+                        />
+                    </a>
+                    <a href="https://discordapp.com/users/1140012750874099772">
+                        <DiscordIcon
+                            class="size-7 transition-transform duration-300 hover:scale-110"
+                        />
+                    </a>
+                    <a href="mailto:sggbusiness.co@gmail.com">
+                        <GmailIcon
+                            class="size-7 transition-transform duration-300 hover:scale-110"
+                        />
+                    </a>
+                </nav>
             </main>
         </div>
     </div>
@@ -108,7 +91,7 @@ import SocialElement from "@/components/SocialElement.astro";
         class="bg-red-100 dark:bg-red-500 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 h-auto hidden lg:block"
     >
         <img
-            class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
+            class="h-56 w-full object-cover lg:h-full"
             src="./photos/HeroIm.jpeg"
             alt={personalImageAlt}
         />

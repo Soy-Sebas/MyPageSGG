@@ -1,12 +1,13 @@
 ---
 const navItems = [
   {
-    title: "Inicio",
-    url: "/#top",
-  },
-  {
     title: "Sobre mí",
     url: "/#sobre-mi",
+  },
+  {
+    title: "Academia",
+    url: "/",
+    descr: "Próximamente",
   },
   {
     title: "Experiencia",
@@ -23,37 +24,49 @@ const navItems = [
     url: "/blog",
     descr: "Próximamente",
   },
-  {
-    title: "Contacto",
-    url: "/#contacto",
-  },
 ];
 ---
 
 <header
-  class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-16 px-2 sm:px-10 2xl:px-20 bg-white border-b-[4px] border-b-[#e42a0f]"
+  class="w-full overflow-hidden z-[99999] py-6 px-2 sm:px-10 2xl:px-20 border-b-[1px]"
 >
-  <a
-    href="https://soyysebas.com/"
-    class="flex justify-center items-center gap-2"
+  <div
+    class="grid items-center justify-center w-full grid-cols-[auto_1fr] mx-auto md:flex max-w-screen-2xl"
   >
-    <h1 class="text-black text-xl">
-      <strong class="text-[#e42a0f]">Soy</strong>Sebas
-    </h1>
-  </a>
-
-  <nav class="hidden xl:flex justify-between items-center text-center xl:space-x-14 2xl:space-x-20">
-    {
-      navItems.map((link) => (
-        <a
-          class="text-black hover:text-[#e42a0f] hover:font-bold"
-          href={link.url}
+    <div class="md:flex-grow flex justify-start">
+      <a
+        href="https://soyysebas.com/"
+        class="ml-4 flex items-center gap-2.5 font-bold transition-transform duration-300 hover:scale-110"
+      >
+        <h1 class="text-black text-xl">soyysebas</h1>
+        <span
+          class="text-[10px] opacity-80 uppercase font-semibold py-0.5 px-1.5 rounded-md bg-[#fd1100] text-white hidden md:block leading-none"
+          >BETA</span
         >
-          {link.title}
-          <div class="text-xs text-red-800 font-bold">{link.descr}</div>
-        </a>
-      ))
-    }
-  </nav>
-  <div>Toggle</div>
+      </a>
+    </div>
+    <nav
+      class="col-span-full grid grid-rows-[0fr] items-center text-center md:flex md:gap-x-16"
+    >
+      {
+        navItems.map((link) => (
+          <a
+            class="text-black transition-transform duration-300 hover:scale-110 hover:font-bold"
+            href={link.url}
+          >
+            {link.title}
+            <div class="text-xs text-[#fd1100] font-bold">{link.descr}</div>
+          </a>
+        ))
+      }
+    </nav>
+    <div
+      class="flex md:flex-grow items-center justify-end"
+    >
+      <button>
+        <span class="py-2.5 px-4 justify-center rounded-[10px] font-bold border flex items-center hover:scale-105 transition-transform duration-300 shadow-md bg-[#fd1100] text-white border-white text-lg leading-none">Contactame</span>
+      </button>
+    </div>
+    <div class="hidden text-black">Toggle</div>
+  </div>
 </header>
