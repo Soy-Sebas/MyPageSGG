@@ -1,12 +1,14 @@
---- 
-interface Props { 
-    class?: string; 
-} 
-const { class: className } = Astro.props; 
+---
+interface Props {
+    class?: string;
+}
+const { class: className } = Astro.props;
 ---
 
 <nav class:list={["astronav-items astronav-toggle", className]}>
-    <ul class="flex flex-col lg:flex-row lg:gap-16">
+    <ul
+        class="flex flex-col space-y-6 lg:space-y-0 lg:items-center lg:flex-row lg:gap-16"
+    >
         <slot />
     </ul>
 </nav>
