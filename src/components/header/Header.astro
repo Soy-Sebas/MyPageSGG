@@ -1,0 +1,78 @@
+---
+import SectionContainer from "@/components/SectionContainer.astro";
+import MenuIcon from "@/components/header/MenuIcon.astro";
+import MenuItems from "@/components/header/MenuItems.astro";
+
+const navItems = [
+  {
+    title: "Sobre mí",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Academia",
+    url: "/academia",
+    descr: "¡Próximamente!",
+  },
+  {
+    title: "Proyectos",
+    url: "/proyectos",
+    descr: "¡Próximamente!",
+  },
+  {
+    title: "Clientes",
+    url: "/#experiencia",
+    descr: "¡Próximamente!",
+  },
+  {
+    title: "Blog",
+    url: "/blog",
+    descr: "¡Próximamente!",
+  },
+];
+---
+
+<SectionContainer>
+  <header
+    class="top-0 left-0 right-0 z-[99999] overflow-hidden flex flex-col border-b lg:flex-row justify-between py-6 px-6 2xl:px-20"
+  >
+    <div class="flex w-full lg:w-auto items-center justify-between">
+      <a
+        href="/"
+        class="flex items-center gap-2.5 font-bold transition-transform duration-300 hover:scale-110"
+      >
+        <h1 class="text-black text-xl">soyysebas</h1>
+        <span
+          class="text-[10px] opacity-80 uppercase font-semibold py-0.5 px-1.5 rounded-md bg-[#fd1100] text-white leading-none"
+          >BETA</span
+        >
+      </a>
+      <div class="block lg:hidden">
+        <MenuIcon class="w-8 h-8 text-black" />
+      </div>
+    </div>
+    <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+      {
+        navItems.map((link) => (
+          <li>
+            <a
+              class="text-black text-center flex lg:w-auto lg:block transition-transform duration-300 lg:hover:scale-110 lg:hover:font-bold"
+              href={link.url}
+            >
+              {link.title}
+              <div class="text-xs text-[#fd1100] font-bold">{link.descr}</div>
+            </a>
+          </li>
+        ))
+      }
+    </MenuItems>
+
+    <div class="hidden lg:flex items-center gap-4">
+      <a
+        href="/#contacto"
+        class="bg-[#fd1100] text-white p-2 font-semibold border-2 border-transparent lg:hover:scale-110 lg:hover:font-bold rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200"
+      >
+        Contactame
+      </a>
+    </div>
+  </header>
+</SectionContainer>
